@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Star, Calendar } from "lucide-react";
+import { diveSites } from "@/data/mockData";
+import DiveSiteCard from "@/components/features/DiveSiteCard";
 
 const Home = () => {
     return (
@@ -82,8 +84,9 @@ const Home = () => {
                         </a>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[1, 2, 3].map((i) => (
-                            <div key={i} className="aspect-[4/5] bg-ocean-mid rounded-xl border border-ocean-light/10"></div>
+                        {/* Display top 3 rated sites */}
+                        {diveSites.slice(0, 3).map((site) => (
+                            <DiveSiteCard key={site.id} site={site} />
                         ))}
                     </div>
                 </div>

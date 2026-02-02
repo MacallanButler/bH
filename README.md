@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# Blue Horizon 🌊
+**A Premium Scuba Diving Booking Platform & Dive Intelligence System**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Blue Horizon Banner](https://images.unsplash.com/photo-1682687220208-22d7a2543e88?q=80&w=2670&auto=format&fit=crop)
 
-Currently, two official plugins are available:
+> **Live Demo**: `http://localhost:3000` (Locally) | **Status**: Prototype Complete  
+> **Role**: Lead Frontend Engineer  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Blue Horizon is a modern, conservation-first platform designed to revolutionize how divers explore and book underwater expeditions. It combines rich data visualization (marine life heatmaps, 3D typography) with a transparent, seamless booking experience.
 
-## React Compiler
+## 🚀 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔹 Dive Site Intelligence
+- **Interactive Dive Exploration**: Browse curated sites with difficulty ratings and real-time conditions.
+- **Marine Life Likelihood Calendar**: A heatmap visualization predicting wildlife sightings based on seasonal data.
+- **Crowd Forecast**: Intelligence tool helping divers avoid peak congestion times.
+- **Underwater Topography**: Stylized depth map visualizations.
 
-## Expanding the ESLint configuration
+### 🔹 Booking & Logistics
+- **Smart Booking Wizard**: Multi-step flow for selecting dates, sites, and diving qualifications.
+- **Transparent Pricing**: Real-time cost calculator with itemized gear rental and mandatory conservation fees.
+- **Dynamic Equipment Selection**: Toggle gear needs (BCD, Regs, etc.) and see the price update instantly.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🔹 Premium "Ocean" Design Service
+- **Custom Design System**: Built on a tailored "Ocean Gradient" palette (Deep Navy → Turquoise → Seafoam).
+- **Fluid Animations**: Smooth page transitions and micro-interactions using Framer Motion.
+- **Responsive Layout**: Fully optimized for mobile dive planning on the go.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Technology Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Framework**: React 19 + TypeScript + Vite
+- **Styling**: Tailwind CSS v3 + Shadcn UI (Customized)
+- **Animation**: Framer Motion
+- **State Management**: React Hooks + Local State
+- **Icons**: Lucide React
+- **Date Handling**: date-fns
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🏗️ Project Structure
+
+```bash
+src/
+├── components/
+│   ├── features/       # Specialized components (MarineCalendar, PricingSummary)
+│   ├── layout/         # App shell (Navigation, Footer)
+│   └── ui/             # Reusable Shadcn primitives
+├── data/               # Mock data for dive sites and prices
+├── pages/              # Route views (Home, DiveSites, Booking)
+└── lib/                # Utilities and helpers
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🏁 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+3. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+---
+
+*Designed with 💙 for the Ocean.*
